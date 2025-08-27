@@ -102,6 +102,8 @@ const App = () => {
       <Total
         total={part1_n.exercises + part2_n.exercises + part3_n.exercises}
       />
+      <hr />
+      <h1>All parts in one object</h1>
     </>
   );
 };
