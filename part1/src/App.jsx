@@ -37,7 +37,7 @@ const Total = (props) => {
     </>
   );
 };
-
+// Ensimmäinen versio
 const App = () => {
   const course = "Half Stack application development";
   const part1 = "Fundamentals of React";
@@ -47,6 +47,7 @@ const App = () => {
   const part3 = "State of a component";
   const exercises3 = 14;
 
+  // Uusi data struktuuri
   const course_n = "Half Stack application development";
   const part1_n = {
     name: "Fundamentals of React",
@@ -60,6 +61,25 @@ const App = () => {
     name: "State of a component",
     exercises: 14,
   };
+
+  // Kaikki osat yhdessä objektissa
+  const course_3 = "Half Stack application development";
+  const parts_3 = [
+    {
+      name: "Fundamentals of React",
+      exercises: 10,
+    },
+    {
+      name: "Using props to pass data",
+      exercises: 7,
+    },
+    {
+      name: "State of a component",
+      exercises: 14,
+    },
+  ];
+
+  // Neljäs versio
 
   return (
     <>
@@ -103,7 +123,21 @@ const App = () => {
         total={part1_n.exercises + part2_n.exercises + part3_n.exercises}
       />
       <hr />
-      <h1>All parts in one object</h1>
+      <h1>All parts in one object -phase3-</h1>
+      <Header name={course_3} />
+      <Content
+        name1={parts_3[0].name}
+        exercises1={parts_3[0].exercises}
+        name2={parts_3[1].name}
+        exercises2={parts_3[1].exercises}
+        name3={parts_3[2].name}
+        exercises3={parts_3[2].exercises}
+      />
+      <Total
+        total={
+          parts_3[0].exercises + parts_3[1].exercises + parts_3[2].exercises
+        }
+      />
     </>
   );
 };
