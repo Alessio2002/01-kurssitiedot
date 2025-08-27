@@ -80,6 +80,23 @@ const App = () => {
   ];
 
   // Neljäs versio
+  const course_4 = {
+    name: "Half Stack application development",
+    parts: [
+      {
+        name: "Fundamentals of React",
+        exercises: 10,
+      },
+      {
+        name: "Using props to pass data",
+        exercises: 7,
+      },
+      {
+        name: "State of a component",
+        exercises: 14,
+      },
+    ],
+  };
 
   return (
     <>
@@ -136,6 +153,24 @@ const App = () => {
       <Total
         total={
           parts_3[0].exercises + parts_3[1].exercises + parts_3[2].exercises
+        }
+      />
+      <hr />
+      <h1>Data structure -phase4-</h1>
+      <Header name={course_4.name} />
+      <Content
+        name1={course_4.parts[0].name}
+        exercises1={course_4.parts[0].exercises}
+        name2={course_4.parts[1].name}
+        exercises2={course_4.parts[1].exercises}
+        name3={course_4.parts[2].name}
+        exercises3={course_4.parts[2].exercises}
+      />
+      <Total
+        total={
+          course_4.parts[0].exercises +
+          course_4.parts[1].exercises +
+          course_4.parts[2].exercises
         }
       />
     </>
